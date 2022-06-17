@@ -1,5 +1,6 @@
 <h1>{{nombre}}</h1>
 
+<!-- A way to display the data in a table. -->
 <dl>
   <td>Nombre: </td>
   <dd> {{nombre}} </dd>
@@ -14,6 +15,8 @@
   <dd> {{nombreCapitalizado}} </dd>
 </dl>
 
+<!-- Calling the method `cambiarNombre()` when the button is clicked. -->
 <button (click)="cambiarNombre()">Cambiar Heroe</button>
 
+<!-- Calling the method `cambiarEdad()` when the button is clicked. -->
 <button (click)="cambiarEdad() ">Cambiar Edad</button>

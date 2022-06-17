@@ -1,24 +1,31 @@
 <h1>Dragon Ball Z</h1>
 <hr>
 
+<!-- A bootstrap class that allows the elements inside to be displayed in a row. -->
 <div class="row">
 
+  <!-- Displaying the list of characters. -->
   <div class="col">
     <h3>Personajes</h3>
     <hr>
     <ul>
-      <li>Krillin  - 700</li>
-      <li>Goku - 15,000</li>
-      <li>Vegeta - 8,500</li>
+      <!-- Iterating through the list of characters and displaying them. -->
+      <li *ngFor="let Personaje of personajes">
+        <!-- Displaying the name and power of the character. -->
+        {{Personaje.nombre}} - {{Personaje.poder | number}}
+      </li>
     </ul>
   </div>
 
+<!-- A form that allows the user to add a new character to the list. -->
   <div class="col">
-    <h3>Agregar</h3>
+    <h3>Agregar <small>{{ nuevo.nombre }}</small></h3>
     <hr>
 
+    <!-- A form that allows the user to add a new character to the list. -->
     <form (ngSubmit)="agregar()">
 
+      <!-- Creating an input field that is bound to the `nuevo.nombre` property. -->
       <input
       type="text"
       placeholder="Nombre"
@@ -29,6 +36,7 @@
       (input)="cambiarNombre( $event )" -->
 
 
+      <!-- Creating an input field that is bound to the `nuevo.poder` property. -->
       <input
       type="number"
       placeholder="Poder"
@@ -37,6 +45,7 @@
       />
       <!-- [value]="nuevo.poder" -->
 
+     <!-- A button that submits the form. -->
       <button class="btn" type="submit">
         Agregar
       </button>

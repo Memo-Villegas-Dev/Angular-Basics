@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+/* A decorator. It is a function that modifies a class. */
 @Component({
   selector: 'app-contador',
   template: `
@@ -18,6 +19,8 @@ import { Component } from '@angular/core';
 
 })
 
+/* The class is called ContadorComponent and it has a property called titulo, which is a string, and a
+property called numero, which is a number */
 export class ContadorComponent{
   titulo: string = 'Contador App';
   numero: number = 10;

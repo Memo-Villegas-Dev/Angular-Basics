@@ -1,18 +1,23 @@
 <p>listado de heroes!</p>
 
+<!-- A template that will be shown if the condition is true. -->
 <div *ngIf="heroeBorrado; else noBorrado">
   <h3>Heroe Borrado: <small>{{heroeBorrado}}</small></h3>
 </div>
 
+<!-- A template that will be shown if the condition is false. -->
 <ng-template #noBorrado>
   <h3>No se ha borrado nada</h3>
 </ng-template>
 
 
+<!-- It's calling the `borrarHeroe()` function when the button is clicked. -->
 <button (click)="borrarHeroe()">
   Borrar
 </button>
 
+<!-- It's a loop that will iterate over the `heroes` array and will print the index and the value of each
+element. -->
 <ul>
   <li *ngFor="let heroe of heroes; let i = index">
     {{i+1}}-{{heroe}}
