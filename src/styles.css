@@ -39,3 +39,38 @@ button:focus{
 .p-1 {
   padding: 1px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  display: block;
+  border: 1px solid rgb(230, 148, 56);
+  border-radius: 50px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn {
+  background-color: rgb(230, 148, 56);
+  border-radius: 50px;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px 10px;
+}
