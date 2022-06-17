@@ -1,0 +1,9 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+  <!-- Iterating through the list of characters and displaying them. -->
+  <li *ngFor="let Personaje of personajes">
+    <!-- Displaying the name and power of the character. -->
+    {{Personaje.nombre}} - {{Personaje.poder | number}}
+  </li>
+</ul>

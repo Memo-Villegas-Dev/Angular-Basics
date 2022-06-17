@@ -1,10 +1,6 @@
 import { Component} from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interface';
 
-/* Defining the structure of the object that will be used in the array. */
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
 
 @Component({
   selector: 'app-main-page',
