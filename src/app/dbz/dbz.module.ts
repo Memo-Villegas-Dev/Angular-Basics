@@ -4,13 +4,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 //Importaciones de terceros
 import { FormsModule } from '@angular/forms';
 import { PersonajesComponent } from './personajes/personajes.component';
+import { AgregarComponent } from './agregar/agregar.component';
 
 
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    PersonajesComponent
+    PersonajesComponent,
+    AgregarComponent
   ],
   imports: [
     CommonModule,

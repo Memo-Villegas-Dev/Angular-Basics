@@ -20,23 +20,9 @@ export class MainPageComponent {
     }
   ];
 
-  /* Creating a new object with the same structure as the one in the array. */
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0
-  }
-
-  /**
-   * If the name is empty, don't do anything; otherwise, add the new character to the list
-   * @returns the value of the variable nuevo.
-   */
-  agregar() {
-    if (this.nuevo.nombre.trim().length == 0) { return; }
-
-    console.log(this.nuevo);
-
-    this.personajes.push(this.nuevo);
-    this.nuevo = { nombre: '', poder: 0 };
+  nuevo : Personaje = {
+    nombre: "Roshi",
+    poder: 3000
   }
 
 }
