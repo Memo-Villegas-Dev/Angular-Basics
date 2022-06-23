@@ -6,14 +6,13 @@
 
   <!-- Displaying the list of characters. -->
   <div class="col">
-    <app-personajes [personajes]="personajes"></app-personajes>
+    <app-personajes ></app-personajes>
   </div>
 
 <!-- A form that allows the user to add a new character to the list. -->
-  <div class="col">
+  <div class="col" >
     <app-agregar
-      [personajes]="personajes"
-      [nuevo]="nuevo"
+    [nuevo]="nuevo"
     ></app-agregar>
   </div>
 

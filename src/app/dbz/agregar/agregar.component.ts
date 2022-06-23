@@ -1,5 +1,6 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-agregar',
@@ -8,13 +9,17 @@ import { Personaje } from '../interfaces/dbz.interface';
 
 export class AgregarComponent {
 
-  @Input() personajes : Personaje[] = [];
 
-    /* Creating a new object with the same structure as the one in the array. */
+    /* Creating a new variable called nuevo, which is of type Personaje, and it is setting the default
+    values for the nombre and poder properties. */
     @Input () nuevo: Personaje = {
       nombre: '',
       poder: 0
     }
+
+    constructor( private DbzService: DbzService){}
+
+    //@Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
     /**
      * If the name is empty, don't do anything; otherwise, add the new character to the list
@@ -23,12 +28,14 @@ export class AgregarComponent {
     agregar() {
       if (this.nuevo.nombre.trim().length == 0) { return; }
 
-      console.log(this.nuevo);
+      //this.onNuevoPersonaje.emit( this.nuevo );
+      this.DbzService.agregarPersonaje(this.nuevo);
 
-      this.personajes.push(this.nuevo);
-      this.nuevo = { nombre: '', poder: 0 }
+      this.nuevo = {
+        nombre:'',
+        poder: 0
+      }
 
-      console.log(this.personajes);
     }
 
 }
